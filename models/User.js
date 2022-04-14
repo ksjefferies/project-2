@@ -12,7 +12,7 @@ const hashPassword = async (user, options) => {
 
 class User extends Model {
     checkPassword(password) {
-        return bcrypt.compareSync(password.this.password)
+        return bcrypt.compareSync(password, this.password)
     }
 }
 

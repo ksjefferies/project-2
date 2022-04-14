@@ -120,7 +120,7 @@ router.put("/:id", async (req, res) => {
             }
         );
         if (updateUser) {
-            res.json(updateUser);
+            res.json("Success");
         } else {
             res.status(400).json({ message: "That user was not found" });
         };
@@ -142,7 +142,7 @@ router.delete("/:id", (req, res) => {
                 res.status(400).json({ message: "That user was not found" });
                 return;
             }
-            res.json(destroyUser);
+            res.json("Success");
         })
         .catch(err => {
             res.status(500).json(err)

@@ -18,18 +18,20 @@ router.post("/", async (req, res) => {
             genre: req.body.genre,
             user_id: req.body.user_id,
         })
-        res.status(200).json(createGame);
+        res.status(200).json("Success");
     }
     catch (err) {
         res.status(500).json(err);
     };
 });
 
-// Update an existing comment
+// Update an existing game
 router.put("/:id", async (req, res) => {
     try {
         const updateGame = await Game.update({
-            text: req.body.text,
+            title: req.body.title,
+            platform: req.body.platform,
+            genre: req.body.genre,
         },
             {
                 where: {
@@ -38,7 +40,7 @@ router.put("/:id", async (req, res) => {
             }
         );
         if (updateGame) {
-            res.status(200).json(updateGame);
+            res.status(200).json("Success");
         } else {
             res.status(400).json({ message: "That comment was not found" })
         };

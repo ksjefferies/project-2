@@ -20,13 +20,12 @@ const sess = {
     db: sequelize
   })
 };
+app.use(express.json())
 
-app.use(routes);
 app.use(session(sess))
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}/public`));
-
+app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Server is listenin on port ${PORT}`))
 });

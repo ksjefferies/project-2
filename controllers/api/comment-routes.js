@@ -37,7 +37,7 @@ router.put("/:id", async (req, res) => {
             }
         );
         if (updateComment) {
-            res.status(200).json(updateComment);
+            res.status(200).json("Success");
         } else {
             res.status(400).json({ message: "That comment was not found" })
         };
