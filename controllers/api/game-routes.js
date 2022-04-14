@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { Comment } = require("../../models");
+const { Game } = require("../../models");
 // const withAuthorization = require('../../utils/auth');
 
 // Get all comments
