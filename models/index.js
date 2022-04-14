@@ -33,4 +33,4 @@ Comment.belongsTo(Game, {
     foreignKey: "game_id"
 });
 
-module.exports = { User, Comment, Game};
+module.exports = { User, Comment, Game };

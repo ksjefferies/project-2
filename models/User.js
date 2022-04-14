@@ -12,11 +12,11 @@ const hashPassword = async (user, options) => {
 
 class User extends Model {
     checkPassword(password) {
-        return bcrypt.compareSync(password. this.password)
+        return bcrypt.compareSync(password.this.password)
     }
 }
 
-User.init (
+User.init(
     {
         id: {
             type: DataTypes.INTEGER,
