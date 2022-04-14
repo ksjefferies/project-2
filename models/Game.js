@@ -29,7 +29,7 @@ Game.init(
             validate: {
                 isDecimal: true
             }
-            
+
         },
         user_id: {
             type: DataTypes.INTEGER,
