@@ -13,9 +13,10 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
     try {
         const createGame = await Game.create({
-            text: req.body.text,
+            title: req.body.title,
+            platform: req.body.platform,
+            genre: req.body.genre,
             user_id: req.body.user_id,
-            post_id: req.body.post_id
         })
         res.status(200).json(createGame);
     }

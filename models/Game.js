@@ -15,21 +15,12 @@ Game.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        release_date: {
+        platform: {
             type: DataTypes.STRING,
-            validate: {
-                isDate: true
-            }
+            allowNull: false
         },
-        developers: {
-            type: DataTypes.STRING,
-        },
-        rating: {
-            type: DataTypes.INTEGER,
-            validate: {
-                isDecimal: true
-            }
-
+        genre: {
+            type: DataTypes.STRING
         },
         user_id: {
             type: DataTypes.INTEGER,
@@ -41,7 +32,7 @@ Game.init(
     },
     {
         sequelize,
-        timestamps: true,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'game',
