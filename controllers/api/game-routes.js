@@ -5,19 +5,19 @@ const { Game } = require("../../models");
 
 // Get all comments
 router.get("/", async (req, res) => {
-    const allComments = await Comment.findAll({});
-    res.json(allComments);
+    const allGames = await Game.findAll({});
+    res.json(allGames);
 });
 
 // Create a new comment
 router.post("/", async (req, res) => {
     try {
-        const createComment = await Comment.create({
+        const createGame = await Game.create({
             text: req.body.text,
             user_id: req.body.user_id,
             post_id: req.body.post_id
         })
-        res.status(200).json(createComment);
+        res.status(200).json(createGame);
     }
     catch (err) {
         res.status(500).json(err);
@@ -27,7 +27,7 @@ router.post("/", async (req, res) => {
 // Update an existing comment
 router.put("/:id", async (req, res) => {
     try {
-        const updateComment = await Comment.update({
+        const updateGame = await Game.update({
             text: req.body.text,
         },
             {
@@ -36,8 +36,8 @@ router.put("/:id", async (req, res) => {
                 }
             }
         );
-        if (updateComment) {
-            res.status(200).json(updateComment);
+        if (updateGame) {
+            res.status(200).json(updateGame);
         } else {
             res.status(400).json({ message: "That comment was not found" })
         };
@@ -50,12 +50,12 @@ router.put("/:id", async (req, res) => {
 // Delete an existing comment
 router.delete("/:id", async (req, res) => {
     try {
-        const destroyComment = Comment.destroy({
+        const destroyGame = Game.destroy({
             where: {
                 id: req.params.id
             }
         });
-        if (!destroyComment) {
+        if (!destroyGame) {
             res.status(400).json({ message: "That comment was not found" });
         } else {
             res.json("Success");
