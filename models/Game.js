@@ -26,6 +26,9 @@ Game.init(
         },
         rating: {
             type: DataTypes.INTEGER,
+            validate: {
+                isDecimal: true
+            }
             
         },
         user_id: {
