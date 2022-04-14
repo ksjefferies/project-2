@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC Tech Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/a6bb1ae288.js" crossorigin="anonymous"></script>
+  </head>
+
+<div class="wrapper">
+    <header>
+        <h1 class="has-text-black px-3 py-3 has-text-weight-bold"><i class="fa-solid fa-gamepad"></i></h1>
+        <nav class="navbar mt-2">
+                <a href="/" class="navbar-item is-hoverable pt-1">homepage</a>
+                <a href="/dashboard" class="navbar-item is-hoverable pt-1">dashboard</a>
+                <a href="/dashboard/create/" class="navbar-item is-hoverable pt-1 mr-4">create post</a>
+                <button id="logout" class="button is-danger">logout</button>
+        </nav>
+    </header>
+
+    <main>
+<div class="card mb-6">
+    <header class="card-header card-header-title has-background-grey-lighter">
+
+        <div class="column">
+            <p class=" has-text-primary-light"></p>
+        </div>
+
+        <div class="column">
+            <span class=""> </span>
+        </div>
+
+    </header>
+    </div>
+    <form class="comment-form">
+        <div>
+            <textarea class="ml-5" name="comment-body"></textarea>
+        </div>
+
+        <div>
+            <button class="button is-warning ml-5 mb-5" type="submit">add comment</button>
+        </div>
+
+    </form>
+
+<div class="comments">
+</div>
+    <script src="/javascript/comment.js"></script>
+    </main>
+
+    <footer class="footer rows pb-2">
+        <div class="row-is-full content has-text-centered">
+            <p>
+                <a href="/">homepage</a> |
+                <a href="/dashboard/">dashboard</a> |
+                <a href="/dashboard/create/">create new post</a>
+            </p>
+        </div>
+    </footer>
+</div>
+
+    <script src="/javascript/logout.js"></script>
+</body>
+</html>
