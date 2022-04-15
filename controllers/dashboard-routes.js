@@ -4,19 +4,27 @@ const { Game, User } = require('../models');
 
 // ADD WITHAUTH
 router.get('/', async (req, res) => {
+    console.log(req.session)
     try {
         const gameData = await Game.findAll({
-            where: { "userId": req.session.userId },
+            where: { "user_id": req.session.user_id },
             include: [User]
         });
 
         const games = gameData.map((game) => game.get({ plain: true }));
         console.log(games);
-        res.render('all-games', {
+        res.render('dashboard', {
             layout: 'dashboard', games,
         });
+        if (loggedIn) {
+            res.redirect("dashboard")
+        } 
+        // else {
+        //     res.json("You are not logged in")
+        // }
     } catch (err) {
-        res.redirect('login');
+        console.log(err)
+        res.status(500)
     }
 });
 

@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 
     const games = gameData.map((game) => game.get({ plain: true }));
 
-    res.render('landing_page', {
+    res.render('login', {
       games: games
     })
   } catch (err) {
