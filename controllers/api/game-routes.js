@@ -1,34 +1,37 @@
 const router = require('express').Router();
 
 const { Game } = require("../../models");
-// const withAuthorization = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 
-// Get all comments
+// Get all games
 router.get("/", async (req, res) => {
-    const allComments = await Comment.findAll({});
-    res.json(allComments);
+    const allGames = await Game.findAll({});
+    res.json(allGames);
 });
 
-// Create a new comment
+// Create a new game ** ADD WITHAUTH **
 router.post("/", async (req, res) => {
     try {
-        const createComment = await Comment.create({
-            text: req.body.text,
+        const createGame = await Game.create({
+            title: req.body.title,
+            platform: req.body.platform,
+            genre: req.body.genre,
             user_id: req.body.user_id,
-            post_id: req.body.post_id
         })
-        res.status(200).json(createComment);
+        res.status(200).json("Success");
     }
     catch (err) {
         res.status(500).json(err);
     };
 });
 
-// Update an existing comment
+// Update an existing game *** ADD WITHAUTH ***
 router.put("/:id", async (req, res) => {
     try {
-        const updateComment = await Comment.update({
-            text: req.body.text,
+        const updateGame = await Game.update({
+            title: req.body.title,
+            platform: req.body.platform,
+            genre: req.body.genre,
         },
             {
                 where: {
@@ -36,8 +39,8 @@ router.put("/:id", async (req, res) => {
                 }
             }
         );
-        if (updateComment) {
-            res.status(200).json(updateComment);
+        if (updateGame) {
+            res.status(200).json("Success");
         } else {
             res.status(400).json({ message: "That comment was not found" })
         };
@@ -47,15 +50,15 @@ router.put("/:id", async (req, res) => {
     };
 });
 
-// Delete an existing comment
+// Delete an existing comment *** ADD WITHAUTH ***
 router.delete("/:id", async (req, res) => {
     try {
-        const destroyComment = Comment.destroy({
+        const destroyGame = Game.destroy({
             where: {
                 id: req.params.id
             }
         });
-        if (!destroyComment) {
+        if (!destroyGame) {
             res.status(400).json({ message: "That comment was not found" });
         } else {
             res.json("Success");
