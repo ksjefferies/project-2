@@ -1,24 +1,24 @@
-<div class="post">
+<div class="game">
   <article class="card">
     <div class="card-header flex-row justify-space-between">
-      <h2>{{post.title}}</h2>
+      <h2>{{game.title}}</h2>
       <div>
-        Posted by {{post.User.username}}
+        Posted by {{game.User.username}}
       </div>
     </div>
     <div class="card-body">
-      {{post.body}}
+      {{game.body}}
     </div>
   </article>
 
-  {{#if post.Comments}}
+  {{#if game.Comments}}
     <section class="card">
       <div class="card-header">
         <h3>Comments</h3>
       </div>
 
       <div class="card-body">
-        {{#each post.Comments}}
+        {{#each game.Comments}}
           <div>
             <p>
               {{body}}
