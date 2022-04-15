@@ -20,6 +20,9 @@ The Gaming Shelf is an online site to keep track of the large game libraries you
 -------
 ## Installation:
 
+To delete database if exist, and create the database...then seed it:  Run the following:
+- 'npm run seed'
+
 
 
 ------
@@ -53,6 +56,7 @@ The Gaming Shelf is an online site to keep track of the large game libraries you
 - [Bcrypt](https://www.npmjs.com/package/bcrypt)
 - [Sequelize](https://sequelize.org/)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
 
 ## License:
 
