@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection.js');
 const bcrypt = require('bcrypt');
+
+const sequelize = require('../config/connection.js');
 
 const hashPassword = async (user, options) => {
     if (user.password) {

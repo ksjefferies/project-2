@@ -1,8 +1,8 @@
 const seedUsers = require("./user.seeds");
 const seedGames = require("./game-seeds");
 const seedComments = require("./comment-seeds");
-
 const sequelize = require("../config/connection");
+
 require("dotenv").config();
 
 const seedAll = async () => {

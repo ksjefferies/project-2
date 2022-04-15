@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { Game, User } = require('../models');
-// const withAuthorization = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
+// ADD WITHAUTH
 router.get('/', async (req, res) => {
     try {
         const gameData = await Game.findAll({
@@ -19,12 +20,14 @@ router.get('/', async (req, res) => {
     }
 });
 
+// ADD WITHAUTH
 router.get('/new', (req, res) => {
     res.render('new-game', {
         layout: 'dashboard'
     });
 });
 
+// ADD WITHAUTH
 router.get('/edit/:id', async (req, res) => {
     try {
         const gameData = await Game.findByPk(req.params.id);
