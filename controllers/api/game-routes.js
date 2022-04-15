@@ -1,15 +1,15 @@
 const router = require('express').Router();
 
 const { Game } = require("../../models");
-// const withAuthorization = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 
-// Get all comments
+// Get all games
 router.get("/", async (req, res) => {
     const allGames = await Game.findAll({});
     res.json(allGames);
 });
 
-// Create a new comment
+// Create a new game ** ADD WITHAUTH **
 router.post("/", async (req, res) => {
     try {
         const createGame = await Game.create({
@@ -25,7 +25,7 @@ router.post("/", async (req, res) => {
     };
 });
 
-// Update an existing game
+// Update an existing game *** ADD WITHAUTH ***
 router.put("/:id", async (req, res) => {
     try {
         const updateGame = await Game.update({
@@ -50,7 +50,7 @@ router.put("/:id", async (req, res) => {
     };
 });
 
-// Delete an existing comment
+// Delete an existing comment *** ADD WITHAUTH ***
 router.delete("/:id", async (req, res) => {
     try {
         const destroyGame = Game.destroy({

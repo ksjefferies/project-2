@@ -1,7 +1,9 @@
-const { Game, User, Comment } = require('../models');
 const router = require('express').Router();
+
+const { Game, User, Comment } = require('../models');
 const sequelize = require('../config/connection');
-// const withAuthorization = require('../utils/auth');
+// const withAuth = require('../utils/auth');
+
 router.get('/', async (req, res) => {
   try {
     const gameData = await Game.findAll({
@@ -18,6 +20,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//  ADD WITHAUTH
 router.get('/game/:id', async (req, res) => {
   try {
     const gameData = await Game.findOne({
