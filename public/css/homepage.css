@@ -3,3 +3,19 @@
     padding-bottom: 2%;
     background-color: #4AEA7A;
 }
+
+main{
+    background-color: black;
+}
+
+#createpost{
+    background-color: #324657;
+}
+
+#postbutton, #morebutton{
+    background-color: #4AEA7A;
+}
+
+#posts{
+    background-color: #8CB1B3;
+}
