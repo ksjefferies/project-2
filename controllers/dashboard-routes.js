@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Game, User } = require('../models');
+const { Game, User, Comment } = require('../models');
 // const withAuth = require('../utils/auth');
 
 // ADD WITHAUTH
@@ -10,11 +10,16 @@ router.get('/', async (req, res) => {
             where: { "user_id": req.session.user_id },
             include: [User]
         });
-
+        const commenData = await Comment.findAll({
+            where: { "game_id": req.session.game_id },
+            include: [Game]
+        });
         const games = gameData.map((game) => game.get({ plain: true }));
         console.log(games);
+        const comments = commenData.map((comment) => comment.get({ plain: true }));
+        console.log(games);
         res.render('dashboard', {
-            layout: 'dashboard', games,
+            layout: 'main', games, comments
         });
         if (loggedIn) {
             res.redirect("dashboard")
@@ -31,7 +36,7 @@ router.get('/', async (req, res) => {
 // ADD WITHAUTH
 router.get('/new', (req, res) => {
     res.render('new-game', {
-        layout: 'dashboard'
+        // layout: 'dashboard'
     });
 });
 
