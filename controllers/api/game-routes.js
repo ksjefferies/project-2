@@ -16,6 +16,7 @@ router.post("/", async (req, res) => {
             title: req.body.title,
             platform: req.body.platform,
             genre: req.body.genre,
+            review: req.body.review,
             user_id: req.body.user_id,
         })
         res.status(200).json("Success");
