@@ -10,8 +10,8 @@
 <body>
     
 {{> header }}
-
-<div class="container mx-auto flex flex-col justify-center py-2.5">
+<main>
+{{!-- <div class="container mx-auto flex flex-col justify-center py-2.5">
 <div id="createpost" class="block p-6 rounded-lg shadow-lg  bg-black">
   <form>
     <div id="game_title" class="form-group mb-6">
@@ -109,13 +109,29 @@
       ease-in-out">post</button>
   </form>
 </div>
-</div>
+</div> --}}
 
 <div class="container mx-auto">
 <div class="grid grid-cols-3 gap-4">
-{{> blogposts }}
+{{#each games as |games| }}
+    <div class="flex justify-center">
+      <div id="posts" class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">{{games.title}}</h5>
+        <p class="text-gray-700 text-base mb-4"> {{ games.genre }} </p>
+        <p class="text-gray-700 text-base mb-4"> {{ games.platform }}</p>
+    
+     
+       
+        
+        <a href="/game/{{games.id}}">
+        <button id="morebutton" data-id="{{ games.id }}"type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">More</button>
+        </a>
+      </div>
+    </div>
+{{/each}}
 </div>
 </div>
+</main>
    </body>
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -129,8 +145,7 @@
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
         crossorigin="anonymous"></script>
         <!-- Self-Coded -->
-        <script type="text/javascript" src="/js.homepage.js"></script>
-        <script type="text/javascript" src="/js.comment.js"></script>
+        <script type="text/javascript" src="../js/homepage.js"></script>
         <!-- Debuggin Script -->
         <!-- <script type="text/javascript" src="./assets/js/debug.js"></script> -->
 </html>

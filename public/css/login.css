@@ -1,4 +1,8 @@
-html {
+#background{
 	background: url("https://source.unsplash.com/1600x900/?videogames") no-repeat center center fixed;
 	background-size: cover;
+}
+
+#signin{
+	color: white;
 }

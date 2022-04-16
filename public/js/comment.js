@@ -22,28 +22,28 @@ const commentFormHandler = async (event) => {
   }
 };
 
-const postForm = async (event) => {
-  event.preventDefault();
-  const comment = $('#comment_text').value.trim()
-  if (comment) {
-    await fetch('/dashboard', {
-      method: 'POST',
-      body: JSON.stringify({
-        comment_id,
-        comment_text
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    document.location.reload();
-  }
-};
+// const postForm = async (event) => {
+//   event.preventDefault();
+//   const comment = $('#comment_text').value.trim()
+//   if (comment) {
+//     await fetch('/dashboard', {
+//       method: 'POST',
+//       body: JSON.stringify({
+//         comment_id,
+//         comment_text
+//       }),
+//       headers: {
+//         'Content-Type': 'application/json'
+//       }
+//     });
+//     document.location.reload();
+//   }
+// };
 
-postbtn.addEventListener('submit', postForm)
+// postbtn.addEventListener('submit', postForm)
 
-document
-  .querySelector('#new-comment-form')
-  .addEventListener('submit', commentFormHandler);
+// document
+//   .querySelector('#new-comment-form')
+//   .addEventListener('submit', commentFormHandler);
 
 

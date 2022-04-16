@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
         const games = gameData.map((game) => game.get({ plain: true }));
         console.log(games);
         const comments = commenData.map((comment) => comment.get({ plain: true }));
-        console.log(games);
+        console.log(comments);
         res.render('dashboard', {
             layout: 'main', games, comments
         });
@@ -44,14 +44,14 @@ router.get('/new', (req, res) => {
 router.get('/edit/:id', async (req, res) => {
     try {
         const gameData = await Game.findByPk(req.params.id);
-
+        
         if (gameData) {
             const game = gameData.get({ plain: true });
             console.log(game);
 
             res.render('edit-game', {
                 layout: 'dashboard',
-                game,
+                game,user
             });
         } else {
             res.status(404).end();
