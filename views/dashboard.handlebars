@@ -14,7 +14,7 @@
 <div class="container mx-auto flex flex-col justify-center py-2.5">
 <div id="createpost" class="block p-6 rounded-lg shadow-lg  bg-black">
   <form>
-    <div class="form-group mb-6">
+    <div id="game_title" class="form-group mb-6">
       <input type="text" class="form-control block
         w-full
         px-3
@@ -32,7 +32,7 @@
         placeholder="Game Title">
     </div>
     <div class="form-group mb-6">
-      <input type="text" class="form-control block
+      <input id="game_platform" type="text" class="form-control block
         w-full
         px-3
         py-1.5
@@ -49,7 +49,7 @@
         placeholder="Platform">
     </div>
     <div class="form-group mb-6">
-      <input type="text" class="form-control block
+      <input id="game_genre" type="text" class="form-control block
         w-full
         px-3
         py-1.5
@@ -66,7 +66,7 @@
         placeholder="Genre">
     </div>
     <div class="form-group mb-6">
-      <textarea
+      <textarea id="comment_text"
       class="
         form-control
         block
@@ -111,6 +111,11 @@
 </div>
 </div>
 
+<div class="container mx-auto">
+<div class="grid grid-cols-3 gap-4">
+{{> blogposts }}
+</div>
+</div>
    </body>
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -124,7 +129,8 @@
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
         crossorigin="anonymous"></script>
         <!-- Self-Coded -->
-        <script type="text/javascript" src="../public/js/homepage.js"></script>
+        <script type="text/javascript" src="/js.homepage.js"></script>
+        <script type="text/javascript" src="/js.comment.js"></script>
         <!-- Debuggin Script -->
         <!-- <script type="text/javascript" src="./assets/js/debug.js"></script> -->
 </html>
