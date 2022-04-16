@@ -44,7 +44,7 @@ To delete database if exist, and create the database...then seed it:  Run the fo
 
 ## Contributors
 
-- 
+- Daniel Norred
 
 ## Technologies Used:
 
