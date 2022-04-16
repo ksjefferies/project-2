@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
 // ADD WITHAUTH
 router.get('/new', (req, res) => {
     res.render('new-game', {
-        layout: 'dashboard'
+        // layout: 'dashboard'
     });
 });
 
