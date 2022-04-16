@@ -6,6 +6,7 @@
 
 main{
     background-color: black;
+    padding-bottom: 5%;
 }
 
 #createpost{
@@ -17,5 +18,13 @@ main{
 }
 
 #posts{
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #8CB1B3;
+}
+
+.login-signup{
+    color: white;
+    padding-left: 150px;
+    justify-content: end;
 }
