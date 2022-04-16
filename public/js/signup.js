@@ -3,18 +3,19 @@ const signupFormHandler = async (event) => {
 
   const usernameCreate = document.querySelector('#username-input-signup');
   const passwordCreate = document.querySelector('#password-input-signup');
-
-  const response = await fetch('/api/user', {
+  const emailCreate = document.querySelector('#email-input-signup');
+  const response = await fetch('/api/users', {
     method: 'POST',
     body: JSON.stringify({
       username: usernameCreate.value,
+      email:   emailCreate.value,
       password: passwordCreate.value,
     }),
     headers: { 'Content-Type': 'application/json' },
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard');
+    document.location.replace('/');
   } else {
     alert('Whoops your sign up failed, try again!');
   }
