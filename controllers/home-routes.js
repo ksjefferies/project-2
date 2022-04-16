@@ -11,9 +11,10 @@ router.get('/', async (req, res) => {
     });
 
     const games = gameData.map((game) => game.get({ plain: true }));
-
+    console.log(req.session.loggedIn)
     res.render('dashboard', {
-      games: games
+      games: games,
+      loggedIn: req.session.loggedIn 
     })
   } catch (err) {
     res.status(500).json(err);
@@ -36,11 +37,11 @@ router.get('/game/:id', async (req, res) => {
     });
 
     if (gameData) {
-
       const game = gameData.get({ plain: true });
-
       console.log(game);
+    
       res.render('single-game', { game, loggedIn: req.session.loggedIn });
+
     } else {
       res.status(404).end();
     }

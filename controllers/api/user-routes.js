@@ -91,7 +91,7 @@ router.post("/login", async (req, res) => {
 // Logout
 router.post("/logout", async (req, res) => {
     try {
-        if (req.session.logged_in) {
+        if (req.session.loggedIn) {
             req.session.destroy(() => {
                 res.status(204).end();
             });
@@ -100,7 +100,7 @@ router.post("/logout", async (req, res) => {
         }
     }
     catch (err) {
-        res.status(500).json(err);
+        res.status(500).send('test')
     }
 });
 

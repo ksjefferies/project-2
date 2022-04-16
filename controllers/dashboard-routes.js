@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { Game, User, Comment } = require('../models');
 // const withAuth = require('../utils/auth');
-
+var Sequelize = require('sequelize');
+var Op = Sequelize.Op;
 // ADD WITHAUTH
 router.get('/', async (req, res) => {
     console.log(req.session)
@@ -10,20 +11,25 @@ router.get('/', async (req, res) => {
             where: { "user_id": req.session.user_id },
             include: [User]
         });
-        const commenData = await Comment.findAll({
-            where: { "game_id": req.session.game_id },
+        const commentData = await Comment.findAll({
+            where: {
+                "game_id": {
+                    [Op.in]: gameData.map(i => i.id),
+                }
+            },
             include: [Game]
         });
         const games = gameData.map((game) => game.get({ plain: true }));
         console.log(games);
-        const comments = commenData.map((comment) => comment.get({ plain: true }));
+        const comments = commentData.map((comment) => comment.get({ plain: true }));
         console.log(comments);
         res.render('dashboard', {
-            layout: 'main', games, comments
+            layout: 'main', games, comments,
+            loggedIn: req.session.loggedIn
         });
         if (loggedIn) {
             res.redirect("dashboard")
-        } 
+        }
         // else {
         //     res.json("You are not logged in")
         // }
@@ -36,7 +42,7 @@ router.get('/', async (req, res) => {
 // ADD WITHAUTH
 router.get('/new', (req, res) => {
     res.render('new-game', {
-        // layout: 'dashboard'
+       
     });
 });
 
@@ -44,14 +50,14 @@ router.get('/new', (req, res) => {
 router.get('/edit/:id', async (req, res) => {
     try {
         const gameData = await Game.findByPk(req.params.id);
-        
+
         if (gameData) {
             const game = gameData.get({ plain: true });
             console.log(game);
 
             res.render('edit-game', {
                 layout: 'dashboard',
-                game,user
+                game, user
             });
         } else {
             res.status(404).end();

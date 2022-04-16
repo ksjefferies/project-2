@@ -1,20 +1,20 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="post-title"]').value;
-  const platform = document.querySelector('textarea[name="post-platform"]').value;
-  const genre = document.querySelector('textarea[name="post-genre"]').value;
-  const review = document.querySelector('textarea[name="post-review"]').value;
+  const form = document.forms[0]
+  const title = form.querySelector('input[name="post-title"]').value;
+  const platform = form.querySelector('input[name="post-platform"]').value;
+  const genre = form.querySelector('input[name="post-genre"]').value;
+  const review = form.querySelector('textarea[name="post-review"]').value;
 
 
-  await fetch(`/api/game`, {
+  await fetch(`/api/games`, {
     method: 'POST',
     body: JSON.stringify({
       title,
       platform,
       genre,
       review,
-      user_id,
     }),
     headers: { 'Content-Type': 'application/json' },
   });
