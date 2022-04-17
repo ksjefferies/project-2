@@ -15,12 +15,12 @@ const signupFormHandler = async (event) => {
   });
 
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace('/login');
   } else {
     alert('Whoops your sign up failed, try again!');
   }
 };
 
-document
-  .querySelector('#signup-form')
-  .addEventListener('submit', signupFormHandler);
+
+document.querySelector('#signup-form')
+document.addEventListener('submit', signupFormHandler);
