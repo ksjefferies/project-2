@@ -1,7 +1,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/homepage.css"> 
 {{> header }}
-{{ game.title }}
-{{ game.platform }}
-{{ game.genre }}
-{{ comment.text }}
+
+<div class="container mx-auto">
+  <div class="flex justify-center">
+    <div id="single-post" class="block p-6 rounded-lg shadow-lg bg-white max-w-full">
+      <h4 class="text-gray-900 text-xl leading-tight font-medium mb-2">{{ game.title }}</h4>
+      <h5>{{ game.platform }}</h5>
+      <h5>{{ game.genre }}</h5>
+      <p class="text-gray-700 text-base mb-4">
+       {{ comment.text }}
+      </p>
+     </div>
+  </div>
+</div>
+
