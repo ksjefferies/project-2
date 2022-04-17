@@ -25,22 +25,26 @@ router.get('/', async (req, res) => {
 router.get('/game/:id', async (req, res) => {
   try {
     const gameData = await Game.findOne({
-
+    
       where: { id: req.params.id },
       include: [
         User,
         {
           model: Comment,
-          include: [User],
+          attributes: ['text'],
         },
       ],
     });
+    const commentData = await Comment.findOne({
+      where: { id: req.params.id },    
+    })
 
     if (gameData) {
       const game = gameData.get({ plain: true });
       console.log(game);
+      const comment = commentData.get({ plain: true });
     
-      res.render('single-game', { game, loggedIn: req.session.loggedIn });
+      res.render('single-game', { game, comment, loggedIn: req.session.loggedIn });
 
     } else {
       res.status(404).end();

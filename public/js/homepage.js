@@ -1,32 +1,18 @@
 const searchbtn = $('#searchbutton');
 const postbtn = $('#postbutton');
 const morebtn = $('#morebutton');
-// const title = $('#game_title').value.trim();
-// const platform = $('#game_platform').value.trim();
-// const genre = $('#game_genre').value.trim();
-// const comment = $('#comment_text').value.trim();
+
 
 searchbtn.click(function(event){
     event.preventdeafault();
 })
 
-// const newFormHandler = async (event) => {
-//     event.preventDefault();
-// if (title && platform && genre) {
-//     const response = await fetch(`/dashboard`, {
-//       method: 'POST',
-//       body: JSON.stringify({ title, platform, genre }),
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//     });
+const randommessage = () => {
+  const messages = ['Wow, Much post', 'Are you winning son?', "It's dangerous to go Alone",'No, you have a problem']
+  let message = messages[Math.floor(Math.random()*messages.length)];
+  $('#randommsg').text(message);
+}
 
-//     if (response.ok) {
-//       document.location.replace('/dashboard');
-//     } else {
-//       alert('Failed to create post');
-//     }
-//   }};
 
 const moreButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
@@ -44,4 +30,6 @@ const moreButtonHandler = async (event) => {
   }
 };
 
+
+randommessage();
 morebtn.click(moreButtonHandler)

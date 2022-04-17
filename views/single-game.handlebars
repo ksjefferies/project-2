@@ -1,38 +1,17 @@
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/homepage.css"> 
 {{> header }}
 
-<div class="game">
-  <article class="card">
-    <div class="card-header flex-row justify-space-between">
-      <h2>{{game.title}}</h2>
-      <div>
-       <p> Posted by {{ user.username }} </p>
-      </div>
-    </div>
-    <div class="card-body">
-      {{game.body}}
-    </div>
-  </article>
-
-  {{#if game.Comments}}
-    <section class="card">
-      <div class="card-header">
-        <h3>Comments</h3>
-      </div>
-
-      <div class="card-body">
-        {{#each game.Comments}}
-          <div>
-            <p>
-              {{body}}
-            </p>
-            <p>
-              &mdash; {{User.username}}, {{format_date createdAt}}
-            </p>
-          </div>
-        {{/each}}
-      </div>
-    </section>
-  {{/if}}
+<div class="container mx-auto">
+  <div class="flex justify-center">
+    <div id="single-post" class="block p-6 rounded-lg shadow-lg bg-white max-w-full">
+      <h4 class="text-gray-900 text-xl leading-tight font-medium mb-2">{{ game.title }}</h4>
+      <h5>{{ game.platform }}</h5>
+      <h5>{{ game.genre }}</h5>
+      <p class="text-gray-700 text-base mb-4">
+       {{ comment.text }}
+      </p>
+     </div>
+  </div>
 </div>
 
-<script src="/js/comment.js"></script>
