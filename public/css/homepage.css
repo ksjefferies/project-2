@@ -51,3 +51,15 @@ body{
     border-width: 10px;
     border-color: #AF3E54;
 }
+
+.fa-gamepad{
+    color: rgb(0, 204, 255);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #AF3E54;
+}
+
+.logo {
+    position: absolute;
+    top:0%;
+    left: 0%;
+}
