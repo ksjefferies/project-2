@@ -21,6 +21,15 @@ main{
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: #8CB1B3;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+#posts h5{
+    font-size: 32px;
+}
+#posts p{
+    font-size: 20px;
 }
 
 .login-signup{
