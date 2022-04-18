@@ -74,3 +74,12 @@ body{
     top: 10px;
     left: 0%;
 }
+#comments{
+border-radius: 50px;
+}
+
+#cmtbackground{
+    background-color: #8CB1B3;
+    border-radius: 50px;
+    margin-top: 5px;
+}

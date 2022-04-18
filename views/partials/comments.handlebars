@@ -1,13 +1,13 @@
-
+<div class="container mx-auto columns-1">
 {{#each game.comments as |comment|}}
-<div class="flex justify-center">
-    <div id="single-post" class="block p-6 rounded-lg shadow-lg bg-white max-w-full">
-        <p class="text-gray-700 text-base mb-4">COMMENT: {{ comment.text }}</p>
-    </div>
+<div id="cmtbackground"class="flex justify-center py-3">
+  <div id="comments" class="p-6 rounded-lg shadow-lg bg-white w-3/4">
+    <p class="text-gray-700 text-base mb-4">
+     {{ comment.text }}
+    </p>
+</div>
 </div>
 {{/each}}
-
-
 
 {{#if loggedIn}}
 <div class="container mx-auto flex flex-col justify-center py-2.5">
@@ -60,5 +60,5 @@
 </div>
 </div>
 {{/if}}
-<script src="/js/comment.js"></script>
+
 

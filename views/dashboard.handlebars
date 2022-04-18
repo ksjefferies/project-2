@@ -9,24 +9,47 @@
 <body>
     
 {{> header }}
-<main>
-<div class="md:container md:mx-auto">
-<div class="grid lg:grid-cols-3 md:grid-cols-2 min:grid-cols-1 items-center -mx-4">
+
+
+
+<div class="container my-12 mx-auto px-4 md:px-12">
+    <div class="flex flex-wrap -mx-1 lg:-mx-4">
+
 {{#each games as |games| }}
-    <div class="flex justify-center">
-      <div id="posts" class="block p-6 rounded-lg shadow-lg bg-white max-w-sm w-full">
-        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">{{games.title}}</h5>
-        <p class="text-gray-700 text-base mb-4"> {{ games.genre }} </p>
-        <p class="text-gray-700 text-base mb-4"> {{ games.platform }}</p>
-    
-     
-       
-        
-        <a href="/game/{{games.id}}">
-        <button id="morebutton" data-id="{{ games.id }}"type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">More</button>
-        </a>
-      </div>
-    </div>
+        <!-- Column -->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+            <!-- Article -->
+            <article class="overflow-hidden bg-white rounded-lg shadow-lg">
+
+                <a href="#">
+                    <img alt="Placeholder" class="block h-auto w-full" src="https://cdn.onebauer.media/one/media/6062/00a2/3046/1f21/63dd/bc2d/GamingSetup.png?format=jpg&quality=80&width=960&height=540&ratio=16-9&resize=aspectfill">
+                </a>
+
+                <header class="flex items-center justify-center leading-tight p-2 md:p-4">
+                    <h1 class="text-xl">
+                            {{games.title}}
+                    </h1>
+                </header>
+
+                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                  <a href="/game/{{games.id}}">  
+                    <button id="morebutton" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">More</button>
+                  </a>
+                        <p class="ml-2 text-sm">
+                            {{games.platform}}
+                        </p>
+                        <p class="ml-2 text-sm">
+                            {{games.genre}}
+                        </p>
+                    </a>
+                </footer>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
 {{/each}}
 </div>
 </div>
