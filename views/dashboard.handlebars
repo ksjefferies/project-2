@@ -11,10 +11,10 @@
 {{> header }}
 <main>
 <div class="md:container md:mx-auto">
-<div class="grid lg:grid-cols-3 md:grid-cols-2 min:grid-cols-1">
+<div class="grid lg:grid-cols-3 md:grid-cols-2 min:grid-cols-1 items-center -mx-4">
 {{#each games as |games| }}
     <div class="flex justify-center">
-      <div id="posts" class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+      <div id="posts" class="block p-6 rounded-lg shadow-lg bg-white max-w-sm w-full">
         <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">{{games.title}}</h5>
         <p class="text-gray-700 text-base mb-4"> {{ games.genre }} </p>
         <p class="text-gray-700 text-base mb-4"> {{ games.platform }}</p>

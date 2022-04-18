@@ -3,11 +3,11 @@
     <div class="container-fluid w-full flex flex-wrap items-center justify-center px-6">
       <div class="container-fluid">
         <h1 class="logo"> <a href="/" class="has-text-black px-3 py-3 has-text-weight-bold fa-2xl"><i class="fa-solid fa-gamepad"></i> </a> </h1>
-        <a class="text-xl text-black font-semibold px-20" >SideQuest</a>
+        <a id="sidequest" class="text-xl text-black font-semibold px-20" >SideQuest</a>
 
       </div>
       {{#if loggedIn}}
-       <a class="text-xl text-black font-semibold px-20" href="/dashboard">Dashboard</a>
+       <a class="text-l text-black font-semibold px-20" href="/dashboard">Dashboard</a>
      {{/if}}
       {{#unless loggedIn}}
       <p class="login-signup"><a href="/login">login</a>/<a href="/signup">signup</a></p>
