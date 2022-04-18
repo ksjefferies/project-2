@@ -1,11 +1,5 @@
-const searchbtn = $('#searchbutton');
-const postbtn = $('#postbutton');
 const morebtn = $('#morebutton');
 
-
-searchbtn.click(function(event){
-    event.preventdeafault();
-})
 
 const randommessage = () => {
   const messages = ['Wow, Much post', 'Are you winning son?', "It's dangerous to go Alone",'No, you have a problem']
