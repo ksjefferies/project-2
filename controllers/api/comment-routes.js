@@ -5,7 +5,13 @@ const { Comment } = require("../../models");
 
 // Get all comments
 router.get("/", async (req, res) => {
-    const allComments = await Comment.findAll({});
+    const game_id = window.location.toString().split('/')[
+        window.location.toString().split('/').length - 1
+    ];
+    const allComments = await Comment.findAll({
+        where: {"game_id": game_id },
+
+    });
     res.json(allComments);
 });
 
@@ -14,7 +20,7 @@ router.post("/", async (req, res) => {
     try {
         const createComment = await Comment.create({
             text: req.body.text,
-            user_id: req.body.user_id,
+            user_id: req.session.user_id,
             game_id: req.body.game_id
         })
         res.status(200).json(createComment);
