@@ -39,6 +39,7 @@ router.get('/game/:id', async (req, res) => {
     if (gameData) {
       const game = gameData.get({ plain: true });
       console.log(game);
+      // res.json(game)
     
       res.render('single-game', { game, loggedIn: req.session.loggedIn });
 
