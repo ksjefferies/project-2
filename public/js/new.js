@@ -5,7 +5,6 @@ const newFormHandler = async (event) => {
   const title = form.querySelector('input[name="post-title"]').value;
   const platform = form.querySelector('input[name="post-platform"]').value;
   const genre = form.querySelector('input[name="post-genre"]').value;
-  const review = form.querySelector('textarea[name="post-review"]').value;
 
 
   await fetch(`/api/games`, {
@@ -14,7 +13,6 @@ const newFormHandler = async (event) => {
       title,
       platform,
       genre,
-      review,
     }),
     headers: { 'Content-Type': 'application/json' },
   });
