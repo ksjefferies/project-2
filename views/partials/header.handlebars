@@ -6,7 +6,9 @@
         <a class="text-xl text-black font-semibold px-20" >SideQuest</a>
 
       </div>
+      {{#if loggedIn}}
        <a class="text-xl text-black font-semibold px-20" href="/dashboard">Dashboard</a>
+     {{/if}}
       {{#unless loggedIn}}
       <p class="login-signup"><a href="/login">login</a>/<a href="/signup">signup</a></p>
       {{/unless}}

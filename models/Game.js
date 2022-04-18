@@ -23,9 +23,6 @@ Game.init(
         genre: {
             type: DataTypes.STRING
         },
-        review: {
-            type: DataTypes.TEXT
-        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
