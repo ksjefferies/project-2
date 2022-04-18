@@ -1,13 +1,13 @@
 <header>
   <nav id="navbar" class="relative w-full flex flex-wrap items-center justify-center py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg">
+        <a id="sidequest" class="text-xl text-black font-semibold px-20" >SideQuest</a>
     <div class="container-fluid w-full flex flex-wrap items-center justify-center px-6">
       <div class="container-fluid">
         <h1 class="logo"> <a href="/" class="has-text-black px-3 py-3 has-text-weight-bold fa-2xl"><i class="fa-solid fa-gamepad"></i> </a> </h1>
-        <a id="sidequest" class="text-xl text-black font-semibold px-20" >SideQuest</a>
 
       </div>
       {{#if loggedIn}}
-       <a class="text-l text-black font-semibold px-20" href="/dashboard">Dashboard</a>
+       <a class="text-l text-black font-semibold px-20" href="/dashboard">Your Library</a>
      {{/if}}
       {{#unless loggedIn}}
       <p class="login-signup"><a href="/login">login</a>/<a href="/signup">signup</a></p>
@@ -32,7 +32,7 @@
           <h2 id="randommsg"class="font-semibold text-4xl mb-4">{{ randommessage }}</h2>
           {{#if loggedIn}}
           <a class="inline-block px-7 py-3 mb-1 border-2 border-gray-200 text-gray-200 font-medium text-sm leading-snug uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-            href="/dashboard/new" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">Create a Post</a>
+            href="/dashboard/new" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">Add a Game</a>
             {{/if}}
         </div>
       </div>
