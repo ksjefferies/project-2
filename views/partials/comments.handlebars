@@ -1,14 +1,17 @@
-{{#each comment as |comment|}}
+{{#each this as |comment|}}
 <div class="flex justify-center">
     <div id="single-post" class="block p-6 rounded-lg shadow-lg bg-white max-w-full">
-        <p class="text-gray-700 text-base mb-4">{{ comment }}</p>
+        <p class="text-gray-700 text-base mb-4">COMMENT: {{ comment.text }}</p>
     </div>
 </div>
 {{/each}}
 
+
+
+
 <div class="container mx-auto flex flex-col justify-center py-2.5">
 <div id="createpost" class="block p-6 rounded-lg shadow-lg  bg-black">
-    <h1 class="text-xl text-black flex justify-center font-semibold py-3" >TEXT HERE</h1>
+    <h1 class="text-xl text-black flex justify-center font-semibold py-3" >{{ game.title }}</h1>
   <form id="new-comment-form">
     <div class="form-group mb-6">
       <textarea id="comment" name="comment-body"
@@ -57,3 +60,4 @@
 </div>
 
 <script src="/js/comment.js"></script>
+

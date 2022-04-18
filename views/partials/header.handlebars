@@ -6,7 +6,9 @@
         <a class="text-xl text-black font-semibold px-20" >SideQuest</a>
 
       </div>
+      {{#if loggedIn}}
        <a class="text-xl text-black font-semibold px-20" href="/dashboard">Dashboard</a>
+     {{/if}}
       {{#unless loggedIn}}
       <p class="login-signup"><a href="/login">login</a>/<a href="/signup">signup</a></p>
       {{/unless}}
@@ -31,6 +33,8 @@
           {{#if loggedIn}}
           <a class="inline-block px-7 py-3 mb-1 border-2 border-gray-200 text-gray-200 font-medium text-sm leading-snug uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
             href="/dashboard/new" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">Create a Post</a>
+            {{!-- {{#else !loggedIn}}
+            <h4 class="font-semibold text-xl mb-6">Hey there, welcome in! Put some games down that you want to get to eventually!</h4> --}}
             {{/if}}
         </div>
       </div>
