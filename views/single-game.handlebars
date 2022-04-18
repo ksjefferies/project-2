@@ -9,9 +9,12 @@
       <h5>{{ game.platform }}</h5>
       <h5>{{ game.genre }}</h5>
       <p class="text-gray-700 text-base mb-4">
-       {{ comment.text }}
+      {{ game.review }}
       </p>
      </div>
   </div>
 </div>
 
+  {{#if comment.text}}
+    {{> comments }}
+  {{/if}}
