@@ -1,12 +1,11 @@
 # Project 2: SideQuest
 -------
-
 ## Table of Content
 
 - [Description](#description)
-- [Images](#images)
+- [Media](#media)
 - [GitHub Repository](#github-repository)
-- [Author](#author)  
+- [Authors](#authors)  
 - [Contributors](#contributors)
 - [Technologies Used](#technologies-used) 
 - [License](#license)
@@ -14,17 +13,21 @@
 -------
 ## Description:  
 
-SideQuest is an online site to keep track of the large game libraries you own.
+SideQuest is an online community site for gamers to post their favorite games with the ability to discuss their game collections with fellow gamers.
 
 ------
-## Images:
+## Media:
 
-<!-- ![Image of The Gaming Shelf](./assets/images/EMTS.jpg) -->
+![Image of SideQuest](./public/images/sidequest-main.jpg)
+
+------
+
+- [Deployed SideQuest Page](https://sidequest-p2.herokuapp.com/)
 
 ----
 ## Github Repository:
 
-- [Github Repository for Project 2: The Gaming Shelf](https://github.com/ksjefferies/project-2)
+- [Github Repository for Project 2: Side Quest](https://github.com/ksjefferies/project-2)
 
 ## Authors:
 
