@@ -1,22 +1,22 @@
 const router = require('express').Router();
 
 const { Comment } = require("../../models");
-// const withAuth = require('../../utils/auth');
+const withAuth = require('../../utils/auth');
 
 // Get all comments
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
     const game_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
     const allComments = await Comment.findAll({
-        where: {"game_id": game_id },
+        where: { "game_id": game_id },
 
     });
     res.json(allComments);
 });
 
 // Create a new comment *** ADD WITHAUTH ***
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
     try {
         const createComment = await Comment.create({
             text: req.body.text,
@@ -31,7 +31,7 @@ router.post("/", async (req, res) => {
 });
 
 // Update an existing comment *** ADD WITHAUTH ***
-router.put("/:id", async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
     try {
         const updateComment = await Comment.update({
             text: req.body.text,
@@ -54,7 +54,7 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete an existing comment *** ADD WITHAUTH ***
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
     try {
         const destroyComment = Comment.destroy({
             where: {

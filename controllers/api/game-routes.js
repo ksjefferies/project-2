@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 const { Game } = require("../../models");
-// const withAuth = require('../../utils/auth');
+const withAuth = require('../../utils/auth');
 
 // Get all games
 router.get("/", async (req, res) => {
@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
 });
 
 // Create a new game ** ADD WITHAUTH **
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
     try {
         const createGame = await Game.create({
             title: req.body.title,
@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
 });
 
 // Update an existing game *** ADD WITHAUTH ***
-router.put("/:id", async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
     try {
         const updateGame = await Game.update({
             title: req.body.title,
@@ -50,8 +50,8 @@ router.put("/:id", async (req, res) => {
     };
 });
 
-// Delete an existing comment *** ADD WITHAUTH ***
-router.delete("/:id", async (req, res) => {
+// Delete an existing game *** ADD WITHAUTH ***
+router.delete("/:id", withAuth, async (req, res) => {
     try {
         const destroyGame = Game.destroy({
             where: {
@@ -59,7 +59,7 @@ router.delete("/:id", async (req, res) => {
             }
         });
         if (!destroyGame) {
-            res.status(400).json({ message: "That comment was not found" });
+            res.status(400).json({ message: "That game was not found" });
         } else {
             res.json("Success");
         };

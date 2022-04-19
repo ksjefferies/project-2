@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const { Game, User, Comment } = require('../models');
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 var Sequelize = require('sequelize');
 var Op = Sequelize.Op;
 // ADD WITHAUTH
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     console.log(req.session)
     try {
         const gameData = await Game.findAll({
@@ -30,9 +30,9 @@ router.get('/', async (req, res) => {
         if (loggedIn) {
             res.redirect("dashboard")
         }
-        // else {
-        //     res.json("You are not logged in")
-        // }
+        else {
+            res.json("You are not logged in")
+        }
     } catch (err) {
         console.log(err)
         res.status(500)
@@ -42,12 +42,12 @@ router.get('/', async (req, res) => {
 // ADD WITHAUTH
 router.get('/new', (req, res) => {
     res.render('new-game', {
-       
+
     });
 });
 
 // ADD WITHAUTH
-router.get('/edit/:id', async (req, res) => {
+router.get('/edit/:id', withAuth, async (req, res) => {
     try {
         const gameData = await Game.findByPk(req.params.id);
 
