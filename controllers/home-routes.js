@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const { Game, User, Comment } = require('../models');
 const sequelize = require('../config/connection');
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
     console.log(req.session.loggedIn)
     res.render('dashboard', {
       games: games,
-      loggedIn: req.session.loggedIn 
+      loggedIn: req.session.loggedIn
     })
   } catch (err) {
     res.status(500).json(err);
@@ -22,10 +22,10 @@ router.get('/', async (req, res) => {
 });
 
 //  ADD WITHAUTH
-router.get('/game/:id', async (req, res) => {
+router.get('/game/:id', withAuth, async (req, res) => {
   try {
     const gameData = await Game.findOne({
-    
+
       where: { id: req.params.id },
       include: [
         User,
@@ -40,7 +40,7 @@ router.get('/game/:id', async (req, res) => {
       const game = gameData.get({ plain: true });
       console.log(game);
       // res.json(game)
-    
+
       res.render('single-game', { game, loggedIn: req.session.loggedIn });
 
     } else {
