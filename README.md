@@ -1,10 +1,9 @@
-# Project 2: The Gaming Shelf
+# Project 2: SideQuest
 -------
 
 ## Table of Content
 
 - [Description](#description)
-- [Installation](#installation)
 - [Images](#images)
 - [GitHub Repository](#github-repository)
 - [Author](#author)  
@@ -15,15 +14,7 @@
 -------
 ## Description:  
 
-The Gaming Shelf is an online site to keep track of the large game libraries you own.
-
--------
-## Installation:
-
-To delete database if exist, and create the database...then seed it:  Run the following:
-- 'npm run seed'
-
-
+SideQuest is an online site to keep track of the large game libraries you own.
 
 ------
 ## Images:
@@ -57,6 +48,7 @@ To delete database if exist, and create the database...then seed it:  Run the fo
 - [Sequelize](https://sequelize.org/)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
 - [Nodemon](https://www.npmjs.com/package/nodemon)
+- [Tailwindcss](https://tailwindcss.com/)
 
 ## License:
 
