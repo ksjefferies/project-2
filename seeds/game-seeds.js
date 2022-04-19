@@ -2,17 +2,17 @@ const { Game } = require("../models");
 
 const gameData = [
     {
-        title: "Ratchet and Clank",
-        platform: "PS5",
+        title: "Sid Meiers Civilization",
+        platform: "Mac Mini",
         genre: "Action",
-        user_id: 1,
+        user_id: 12,
         comment_id: 1
     },
     {
-        title: "Metroid Dread",
+        title: "My Little Pony - Friendship is Magic",
         platform: "Switch",
-        genre: "Action",
-        user_id: 2,
+        genre: "Fantasy",
+        user_id: 10,
         comment_id: 2
     },
     {

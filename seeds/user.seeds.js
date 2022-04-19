@@ -2,63 +2,63 @@ const { User } = require("../models");
 
 const userData = [
     {
-        username: "username1",
-        email: "email1@gmail.com",
+        username: "JakeT",
+        email: "JakeT@gmail.com",
         password: "password1"
     },
     {
-        username: "username2",
-        email: "email2@gmail.com",
+        username: "JasonW",
+        email: "JasonW@gmail.com",
         password: "password2"
     },
     {
-        username: "username3",
-        email: "email3@gmail.com",
+        username: "AmyP",
+        email: "AmyP@gmail.com",
         password: "password3"
     },
     {
-        username: "username4",
-        email: "email4@gmail.com",
+        username: "deathrider",
+        email: "deathrider@gmail.com",
         password: "password4"
     },
     {
-        username: "username5",
-        email: "email5@gmail.com",
+        username: "dashcash",
+        email: "dashcash@gmail.com",
         password: "password5"
     },
     {
-        username: "username6",
-        email: "email6@gmail.com",
+        username: "wildcasey",
+        email: "wildcasey@gmail.com",
         password: "password6"
     },
     {
-        username: "username7",
-        email: "email7@gmail.com",
+        username: "cabbagefrog",
+        email: "cabbagefrog@gmail.com",
         password: "password7"
     },
     {
-        username: "username8",
-        email: "email8@gmail.com",
+        username: "losteinstein",
+        email: "losteinstein@gmail.com",
         password: "password8"
     },
     {
-        username: "username9",
-        email: "email9@gmail.com",
+        username: "climbingduck",
+        email: "climbingduck@gmail.com",
         password: "password9"
     },
     {
-        username: "username10",
-        email: "email10@gmail.com",
+        username: "paul",
+        email: "paulsNotHome@gmail.com",
         password: "password10"
     },
     {
-        username: "username11",
-        email: "email11@gmail.com",
+        username: "bootcamphater",
+        email: "bootcamphater@gmail.com",
         password: "password11"
     },
     {
-        username: "username12",
-        email: "email12@gmail.com",
+        username: "garyTalmes",
+        email: "garyTalmes@gmail.com",
         password: "password12"
     }
 
