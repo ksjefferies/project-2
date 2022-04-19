@@ -4,7 +4,7 @@
  
 <header>
   <nav id="navbar" class="relative w-full flex flex-wrap items-center justify-center py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg">
-        <a id="sidequest" class="text-xl text-black font-semibold px-20" >SideQuest</a>
+        <a id="sidequest" class="text-xl text-black font-semibold pt-2.5 px-20" ><i id="exclamation"class="fa-solid fa-exclamation"></i> SideQuest</a>
         </div>
     <div class="container-fluid w-full flex flex-start px-6 justify-between items-center">
         <h1 class="flex flex-start"> <a href="/" class="has-text-black self-center has-text-weight-bold fa-2xl"><i class="fa-solid fa-gamepad"></i> </a> </h1>
@@ -12,11 +12,11 @@
       <p id="login-signup" class="flex justify-self-end"><a href="/login">login</a>/<a href="/signup">signup</a></p>
       {{/unless}}
       {{#if loggedIn}}
-    <a id="login-signup"class="flex justify-self-end" id="logout" href="">Log Out</a>
+    <a class="flex justify-self-end" id="logout" href="">Log Out</a>
       {{/if}}
           </div>
       {{#if loggedIn}}     
-       <a class="text-l flex justify-end text-black font-semibold px-20" href="/dashboard">Your Library</a>
+       <a id="library" class="text-l flex justify-end text-black font-semibold px-20" href="/dashboard">Your Library</a>
        </div>
      {{/if}}
   
