@@ -1,28 +1,28 @@
 <header>
   <nav id="navbar" class="relative w-full flex flex-wrap items-center justify-center py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg">
-        <a id="sidequest" class="text-xl text-black font-semibold px-20" >SideQuest</a>
-    <div class="container-fluid w-full flex flex-wrap items-center justify-center px-6">
-      <div class="container-fluid">
-        <h1 class="logo"> <a href="/" class="has-text-black px-3 py-3 has-text-weight-bold fa-2xl"><i class="fa-solid fa-gamepad"></i> </a> </h1>
-
-      </div>
-      {{#if loggedIn}}
-       <a class="text-l text-black font-semibold px-20" href="/dashboard">Your Library</a>
-     {{/if}}
+        <a id="sidequest" class="text-xl text-black font-semibold pt-2.5 px-20" ><i id="exclamation"class="fa-solid fa-exclamation"></i> SideQuest</a>
+        </div>
+    <div class="container-fluid w-full flex flex-start px-6 justify-between items-center">
+        <h1 class="flex flex-start"> <a href="/" class="has-text-black self-center has-text-weight-bold fa-2xl"><i class="fa-solid fa-gamepad"></i> </a> </h1>
       {{#unless loggedIn}}
-      <p class="login-signup"><a href="/login">login</a>/<a href="/signup">signup</a></p>
+      <p id="login-signup" class="flex justify-self-end"><a href="/login">login</a>/<a href="/signup">signup</a></p>
       {{/unless}}
-  
       {{#if loggedIn}}
-    <a class="login-signup" id="logout" href="#">Log Out</a>
+    <a class="flex justify-self-end" id="logout" href="">Log Out</a>
       {{/if}}
+          </div>
+      {{#if loggedIn}}     
+       <a id="library" class="text-l flex justify-end text-black font-semibold px-20" href="/dashboard">Your Library</a>
+       </div>
+     {{/if}}
+  
     </div>
   </nav>
 
   <!-- Jumbotron -->
 
   <div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover" style="
-  background-image: url('https://source.unsplash.com/1600x900/?videogames');
+  background-image: url('https://source.unsplash.com/collection/9251042/1600x900');
   height: 400px;
 ">
     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"

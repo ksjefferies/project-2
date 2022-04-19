@@ -4,23 +4,26 @@
  
 <header>
   <nav id="navbar" class="relative w-full flex flex-wrap items-center justify-center py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg">
-    <div class="container-fluid w-full flex flex-wrap items-center justify-center px-6">
-      <div class="container-fluid">
-        <h1 class="logo"> <a class="has-text-black px-3 py-3 has-text-weight-bold fa-2xl"><i class="fa-solid fa-gamepad"></i> </a> </h1>
-        <a class="text-xl text-black font-semibold px-20" href="/">SideQuest</a>
-
-      </div>
-       <a class="text-xl text-black font-semibold px-200" href="/dashboard">Dashboard</a>
+        <a id="sidequest" class="text-xl text-black font-semibold px-20" >SideQuest</a>
+        </div>
+    <div class="container-fluid w-full flex flex-start px-6 justify-between items-center">
+        <h1 class="flex flex-start"> <a href="/" class="has-text-black self-center has-text-weight-bold fa-2xl"><i class="fa-solid fa-gamepad"></i> </a> </h1>
       {{#unless loggedIn}}
-      <p class="login-signup"><a href="/login">login</a>/<a href="/signup">signup</a></p>
+      <p id="login-signup" class="flex justify-self-end"><a href="/login">login</a>/<a href="/signup">signup</a></p>
       {{/unless}}
-  
       {{#if loggedIn}}
-    <a class="login-signup" id="logout" href="#">Log Out</a>
+    <a id="login-signup"class="flex justify-self-end" id="logout" href="">Log Out</a>
       {{/if}}
+          </div>
+      {{#if loggedIn}}     
+       <a class="text-l flex justify-end text-black font-semibold px-20" href="/dashboard">Your Library</a>
+       </div>
+     {{/if}}
+  
     </div>
   </nav>
-
+</header>
+<article>
 <div class="container mx-auto flex flex-col justify-center py-20">
   <div id="createpost" class="block p-6 rounded-lg shadow-lg">
     <form id="new-post-form">
@@ -99,5 +102,6 @@
     </form>
   </div>
 </div>
+</article>
 
 <script src="/js/new.js"></script>
