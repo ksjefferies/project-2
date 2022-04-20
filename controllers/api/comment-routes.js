@@ -10,12 +10,12 @@ router.get("/", withAuth, async (req, res) => {
     ];
     const allComments = await Comment.findAll({
         where: { "game_id": game_id },
-
     });
+
     res.json(allComments);
 });
 
-// Create a new comment *** ADD WITHAUTH ***
+// Create a new comment
 router.post("/", withAuth, async (req, res) => {
     try {
         const createComment = await Comment.create({
@@ -30,7 +30,7 @@ router.post("/", withAuth, async (req, res) => {
     };
 });
 
-// Update an existing comment *** ADD WITHAUTH ***
+// Update an existing comment
 router.put("/:id", withAuth, async (req, res) => {
     try {
         const updateComment = await Comment.update({
@@ -53,7 +53,7 @@ router.put("/:id", withAuth, async (req, res) => {
     };
 });
 
-// Delete an existing comment *** ADD WITHAUTH ***
+// Delete an existing comment
 router.delete("/:id", withAuth, async (req, res) => {
     try {
         const destroyComment = Comment.destroy({

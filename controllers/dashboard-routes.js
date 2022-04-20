@@ -1,9 +1,10 @@
 const router = require('express').Router();
+
 const { Game, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 var Sequelize = require('sequelize');
 var Op = Sequelize.Op;
-// ADD WITHAUTH
+
 router.get('/', withAuth, async (req, res) => {
     console.log(req.session)
     try {
@@ -19,14 +20,16 @@ router.get('/', withAuth, async (req, res) => {
             },
             include: [Game]
         });
+
         const games = gameData.map((game) => game.get({ plain: true }));
-        console.log(games);
+        // console.log(games);
         const comments = commentData.map((comment) => comment.get({ plain: true }));
-        console.log(comments);
+        // console.log(comments);
         res.render('dashboard', {
             layout: 'main', games, comments,
             loggedIn: req.session.loggedIn
         });
+
         if (loggedIn) {
             res.redirect("dashboard")
         }
@@ -39,14 +42,11 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-// ADD WITHAUTH
 router.get('/new', (req, res) => {
     res.render('new-game', {
-
     });
 });
 
-// ADD WITHAUTH
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
         const gameData = await Game.findByPk(req.params.id);

@@ -4,11 +4,12 @@ const signupFormHandler = async (event) => {
   const usernameCreate = document.querySelector('#username-input-signup');
   const passwordCreate = document.querySelector('#password-input-signup');
   const emailCreate = document.querySelector('#email-input-signup');
+
   const response = await fetch('/api/users', {
     method: 'POST',
     body: JSON.stringify({
       username: usernameCreate.value,
-      email:   emailCreate.value,
+      email: emailCreate.value,
       password: passwordCreate.value,
     }),
     headers: { 'Content-Type': 'application/json' },
@@ -20,7 +21,6 @@ const signupFormHandler = async (event) => {
     alert('Whoops your sign up failed, try again!');
   }
 };
-
 
 document.querySelector('#signup-form')
 document.addEventListener('submit', signupFormHandler);

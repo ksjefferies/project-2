@@ -1,35 +1,36 @@
+<link rel="stylesheet" href="/css/homepage.css">
 
-    <link rel="stylesheet" href="/css/homepage.css">
 
- 
 <header>
-  <nav id="navbar" class="relative w-full flex flex-wrap items-center justify-center py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg">
-        <a id="sidequest" class="text-xl text-black font-semibold pt-2.5 px-20" ><i id="exclamation"class="fa-solid fa-exclamation"></i> SideQuest</a>
-        </div>
+  <nav id="navbar"
+    class="relative w-full flex flex-wrap items-center justify-center py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg">
+    <a id="sidequest" class="text-xl text-black font-semibold pt-2.5 px-20"><i id="exclamation"
+        class="fa-solid fa-exclamation"></i> SideQuest</a>
+    </div>
     <div class="container-fluid w-full flex flex-start px-6 justify-between items-center">
-        <h1 class="flex flex-start"> <a href="/" class="has-text-black self-center has-text-weight-bold fa-2xl"><i class="fa-solid fa-gamepad"></i> </a> </h1>
+      <h1 class="flex flex-start"> <a href="/" class="has-text-black self-center has-text-weight-bold fa-2xl"><i
+            class="fa-solid fa-gamepad"></i> </a> </h1>
       {{#unless loggedIn}}
       <p id="login-signup" class="flex justify-self-end"><a href="/login">login</a>/<a href="/signup">signup</a></p>
       {{/unless}}
       {{#if loggedIn}}
-    <a class="flex justify-self-end" id="logout" href="">Log Out</a>
+      <a class="flex justify-self-end" id="logout" href="">Log Out</a>
       {{/if}}
-          </div>
-      {{#if loggedIn}}     
-       <a id="library" class="text-l flex justify-end text-black font-semibold px-20" href="/dashboard">Your Library</a>
-       </div>
-     {{/if}}
-  
+    </div>
+    {{#if loggedIn}}
+    <a id="library" class="text-l flex justify-end text-black font-semibold px-20" href="/dashboard">Your Library</a>
+    </div>
+    {{/if}}
+
     </div>
   </nav>
 </header>
 <article>
-<div class="container mx-auto flex flex-col justify-center py-20">
-  <div id="createpost" class="block p-6 rounded-lg shadow-lg">
-    <form id="new-post-form">
-      <div class="form-group mb-6">
-        <input name="post-title" type="text"
-          class="form-control block
+  <div class="container mx-auto flex flex-col justify-center py-20">
+    <div id="createpost" class="block p-6 rounded-lg shadow-lg">
+      <form id="new-post-form">
+        <div class="form-group mb-6">
+          <input name="post-title" type="text" class="form-control block
                 w-full
                 px-3
                 py-1.5
@@ -43,11 +44,10 @@
                 ease-in-out
                 m-0
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
-          placeholder="Game Title">
-      </div>
-      <div class="form-group mb-6">
-        <input name="post-platform" type="text"
-          class="form-control block
+            placeholder="Game Title">
+        </div>
+        <div class="form-group mb-6">
+          <input name="post-platform" type="text" class="form-control block
                 w-full
                 px-3
                 py-1.5
@@ -61,11 +61,10 @@
                 ease-in-out
                 m-0
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
-          placeholder="Platform">
-      </div>
-      <div class="form-group mb-6">
-        <input name="post-genre" type="text"
-          class="form-control block
+            placeholder="Platform">
+        </div>
+        <div class="form-group mb-6">
+          <input name="post-genre" type="text" class="form-control block
                 w-full
                 px-3
                 py-1.5
@@ -79,9 +78,9 @@
                 ease-in-out
                 m-0
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
-          placeholder="Genre">
-      </div>
-      <button id="postbutton" type="submit" class="
+            placeholder="Genre">
+        </div>
+        <button id="postbutton" type="submit" class="
               w-full
               px-6
               py-2.5
@@ -99,9 +98,9 @@
               transition
               duration-150
               ease-in-out">post</button>
-    </form>
+      </form>
+    </div>
   </div>
-</div>
 </article>
 
 <script src="/js/new.js"></script>

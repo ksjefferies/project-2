@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
     res.json(allGames);
 });
 
-// Create a new game ** ADD WITHAUTH **
+// Create a new game
 router.post("/", withAuth, async (req, res) => {
     try {
         const createGame = await Game.create({
@@ -25,7 +25,7 @@ router.post("/", withAuth, async (req, res) => {
     };
 });
 
-// Update an existing game *** ADD WITHAUTH ***
+// Update an existing game
 router.put("/:id", withAuth, async (req, res) => {
     try {
         const updateGame = await Game.update({
@@ -50,7 +50,7 @@ router.put("/:id", withAuth, async (req, res) => {
     };
 });
 
-// Delete an existing game *** ADD WITHAUTH ***
+// Delete an existing game
 router.delete("/:id", withAuth, async (req, res) => {
     try {
         const destroyGame = Game.destroy({
