@@ -1,10 +1,10 @@
-#navbar{
+#navbar {
     padding-top: 1%;
     padding-bottom: 1%;
     background-color: #4AEA7A;
 }
 
-#sidequest{
+#sidequest {
     font-size: 40px;
     font-family: 'PT Sans', sans-serif;
     color: white;
@@ -12,33 +12,36 @@
     -webkit-text-stroke-color: black
 }
 
-#library{
+#library {
     font-family: 'PT Sans', sans-serif;
     color: white;
 }
 
-#exclamation{
+#exclamation {
     color: yellow;
 }
 
-body{
+body {
     background-color: black;
     padding-bottom: 5%;
 }
 
-#createpost{
+#createpost {
     background-color: #324657;
 }
 
-#createpost h1{
+#createpost h1 {
     color: white;
 }
 
-#postbutton, #morebutton, #delete, #commentbutton{
+#postbutton,
+#morebutton,
+#delete,
+#commentbutton {
     background-color: #4AEA7A;
 }
 
-#posts{
+#posts {
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: #8CB1B3;
@@ -46,24 +49,27 @@ body{
     padding-right: 80px;
     border-style: solid;
     border-width: 3px;
-    border-color: #ec110d;;
+    border-color: #ec110d;
+    ;
 }
 
-#posts h5{
+#posts h5 {
     font-size: 32px;
 }
-#posts p{
+
+#posts p {
     font-size: 20px;
 }
 
-#login-signup,#logout{
+#login-signup,
+#logout {
     color: white;
     padding-left: 150px;
     font-weight: 800;
     font-family: 'PT Sans', sans-serif
 }
 
-#single-post{
+#single-post {
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #8CB1B3;
@@ -72,23 +78,22 @@ body{
     border-color: #ec110d;
 }
 
-.fa-gamepad{
+.fa-gamepad {
     color: rgb(0, 204, 255);
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #AF3E54;
 }
 
-
-#comments{
-border-radius: 50px;
+#comments {
+    border-radius: 50px;
 }
 
-#cmtbackground{
+#cmtbackground {
     background-color: #8CB1B3;
     border-radius: 50px;
     margin-top: 5px;
 }
 
-#pic{
+#pic {
     border-radius: 50px;
 }

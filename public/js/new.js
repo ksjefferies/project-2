@@ -6,7 +6,6 @@ const newFormHandler = async (event) => {
   const platform = form.querySelector('input[name="post-platform"]').value;
   const genre = form.querySelector('input[name="post-genre"]').value;
 
-
   await fetch(`/api/games`, {
     method: 'POST',
     body: JSON.stringify({

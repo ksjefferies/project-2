@@ -1,76 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="/css/homepage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/css/homepage.css">
 </head>
+
 <body>
-    
-{{> header }}
+
+    {{> header }}
 
 
-<main>
-<div class="container my-12 mx-auto px-4 md:px-12">
-    <div class="flex flex-wrap -mx-1 lg:-mx-4">
+    <main>
+        <div class="container my-12 mx-auto px-4 md:px-12">
+            <div class="flex flex-wrap -mx-1 lg:-mx-4">
 
-{{#each games as |games| }}
-        <!-- Column -->
-        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                {{#each games as |games| }}
+                <!-- Column -->
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
 
-            <!-- Article -->
-            <article class="overflow-hidden bg-white rounded-lg shadow-lg">
+                    <!-- Article -->
+                    <article class="overflow-hidden bg-white rounded-lg shadow-lg">
 
-                <a href="#">
-                    <img alt="Computer and game controller on desk" class="block h-auto w-full" src="https://cdn.onebauer.media/one/media/6062/00a2/3046/1f21/63dd/bc2d/GamingSetup.png?format=jpg&quality=80&width=960&height=540&ratio=16-9&resize=aspectfill">
-                </a>
+                        <a href="#">
+                            <img alt="Computer and game controller on desk" class="block h-auto w-full"
+                                src="https://cdn.onebauer.media/one/media/6062/00a2/3046/1f21/63dd/bc2d/GamingSetup.png?format=jpg&quality=80&width=960&height=540&ratio=16-9&resize=aspectfill">
+                        </a>
 
-                <header class="flex items-center flex-wrap justify-center leading-tight p-2 md:p-4">
-                    <h1 class="text-xl">
-                            {{games.title}}
-                    </h1>
-                    <div class="container">
-                        <p class="flex justify-center pt-2 ml-2 text-xs italic text-ellipsis overflow-hidden"> 
-                           created by: {{user.username}}
-                        </p>
-                        </div>
-                </header>
+                        <header class="flex items-center flex-wrap justify-center leading-tight p-2 md:p-4">
+                            <h1 class="text-xl">
+                                {{games.title}}
+                            </h1>
+                            <div class="container">
+                                <p class="flex justify-center pt-2 ml-2 text-xs italic text-ellipsis overflow-hidden">
+                                    created by: {{user.username}}
+                                </p>
+                            </div>
+                        </header>
 
-                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                  <a href="/game/{{games.id}}">  
-                    <button id="morebutton" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Comment</button>
-                  </a>
-                        <p class="ml-2 text-sm text-ellipsis overflow-hidden">
-                            {{games.platform}}
-                        </p>
-                        <p class="ml-2 text-sm text-clip overflow-hidden">
-                            {{games.genre}}
-                        </p>
-                    </a>
-                </footer>
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a href="/game/{{games.id}}">
+                                <button id="morebutton" type="button"
+                                    class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Comment</button>
+                            </a>
+                            <p class="ml-2 text-sm text-ellipsis overflow-hidden">
+                                {{games.platform}}
+                            </p>
+                            <p class="ml-2 text-sm text-clip overflow-hidden">
+                                {{games.genre}}
+                            </p>
+                            </a>
+                        </footer>
 
-            </article>
-            <!-- END Article -->
+                    </article>
+                    <!-- END Article -->
 
+                </div>
+                <!-- END Column -->
+                {{/each}}
+            </div>
         </div>
-        <!-- END Column -->
-{{/each}}
-</div>
-</div>
-</main>
-   </body>
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <!-- Moment.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <!-- Bootstrap v 4.6 -->
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-        crossorigin="anonymous"></script>
-        <!-- Self-Coded -->
-        <script type="text/javascript" src="../js/homepage.js"></script>
+    </main>
+</body>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Bootstrap v 4.6 -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+    crossorigin="anonymous"></script>
+<!-- Self-Coded -->
+<script type="text/javascript" src="../js/homepage.js"></script>
+
 </html>

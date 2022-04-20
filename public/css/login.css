@@ -1,23 +1,22 @@
-#background{
+#background {
 	background: url("https://source.unsplash.com/collection/9251042/1600x900") no-repeat center center fixed;
 	background-size: cover;
 }
 
-#signin{
+#signin {
 	color: white;
 	-webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+	-webkit-text-stroke-color: black;
 }
 
-#create{
+#create {
 	font-size: 18px;
 	font-weight: 800;
 	color: #4AEA7A;
 	-webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+	-webkit-text-stroke-color: black;
 }
 
-#button{
- background-color: #4AEA7A;
+#button {
+	background-color: #4AEA7A;
 }
-

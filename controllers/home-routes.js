@@ -21,7 +21,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-//  ADD WITHAUTH
 router.get('/game/:id', withAuth, async (req, res) => {
   try {
     const gameData = await Game.findOne({
@@ -39,10 +38,8 @@ router.get('/game/:id', withAuth, async (req, res) => {
     if (gameData) {
       const game = gameData.get({ plain: true });
       console.log(game);
-      // res.json(game)
 
       res.render('single-game', { game, loggedIn: req.session.loggedIn });
-
     } else {
       res.status(404).end();
     }
