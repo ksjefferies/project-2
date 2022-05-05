@@ -3,7 +3,8 @@
 ## Table of Content
 
 - [Description](#description)
-- [Media](#media)
+- [Image](#image)
+- [Site URL](#site-url)
 - [GitHub Repository](#github-repository)
 - [Authors](#authors)  
 - [Contributors](#contributors)
@@ -16,15 +17,15 @@
 SideQuest is an online community site for gamers to post their favorite games with the ability to discuss their game collections with fellow gamers.
 
 ------
-## Media:
+## Image:
 
 ![Image of SideQuest](./public/images/sidequest-main.jpg)
 
 ------
+## Site URL
 
 - [Deployed SideQuest Page](https://sidequest-p2.herokuapp.com/)
 
-----
 ## Github Repository:
 
 - [Github Repository for Project 2: Side Quest](https://github.com/ksjefferies/project-2)
@@ -36,22 +37,16 @@ SideQuest is an online community site for gamers to post their favorite games wi
 - [Victor Kennedy](https://github.com/Victorini1)
 - [Stephen Elliott](https://github.com/UsernameisStephen)
 
-## Contributors
-
-- Daniel Norred
-
 ## Technologies Used:
 
-- [Express.js](https://expressjs.com/)
-- [Express-session](https://expressjs.com/en/resources/middleware/session.html)
-- [Handlebars](https://handlebarsjs.com/)
-- [Node](https://nodejs.org/en/)
-- [MySql2](https://www.npmjs.com/package/mysql2)
-- [Bcrypt](https://www.npmjs.com/package/bcrypt)
-- [Sequelize](https://sequelize.org/)
-- [Dotenv](https://www.npmjs.com/package/dotenv)
-- [Nodemon](https://www.npmjs.com/package/nodemon)
-- [Tailwindcss](https://tailwindcss.com/)
+![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![node](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![HandleBars JS](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black)  
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
 ## License:
 
