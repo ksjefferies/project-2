@@ -28,12 +28,11 @@ SideQuest is an online community site for gamers to post their favorite games wi
 
 ## Github Repository:
 
-- [Github Repository for Project 2: Side Quest](https://github.com/ksjefferies/project-2)
+- [Github Repository for Project 2: Side Quest](https://github.com/ksjefferies/SideQuest)
 
 ## Authors:
 
 - [Kelly Jefferies](https://github.com/ksjefferies)
-- [Eugene Ahn](https://github.com/eugene125)
 - [Victor Kennedy](https://github.com/Victorini1)
 - [Stephen Elliott](https://github.com/UsernameisStephen)
 
