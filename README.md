@@ -28,7 +28,7 @@ SideQuest is an online community site for gamers to post their favorite games wi
 
 ## Github Repository:
 
-- [Github Repository for Project 2: Side Quest](https://github.com/ksjefferies/project-2)
+- [Github Repository for Project 2: Side Quest](https://github.com/ksjefferies/SideQuest)
 
 ## Authors:
 
