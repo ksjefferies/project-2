@@ -33,7 +33,6 @@ SideQuest is an online community site for gamers to post their favorite games wi
 ## Authors:
 
 - [Kelly Jefferies](https://github.com/ksjefferies)
-- [Eugene Ahn](https://github.com/eugene125)
 - [Victor Kennedy](https://github.com/Victorini1)
 - [Stephen Elliott](https://github.com/UsernameisStephen)
 
