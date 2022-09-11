@@ -24,7 +24,7 @@ SideQuest is an online community site for gamers to post their favorite games wi
 ------
 ## Site URL
 
-- [Deployed SideQuest Page](https://sidequest-p2.herokuapp.com/)
+Not currently deployed
 
 ## Github Repository:
 
@@ -45,7 +45,6 @@ SideQuest is an online community site for gamers to post their favorite games wi
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
 ## License:
 
